@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background: black;
+    color: white;
+}
+
+.dark-mode  {
+    background-color: #444 !important;
+    color: white !important;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Meniu Navigatie */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.3);
+}
+
+.dark-mode .nav-menu {
+    box-shadow: 0px 0px 5px 5px white;
+}
+
+.nav-menu li {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.nav-menu li:hover .nav-link{
+    transition: all 0.4s ease-in-out;
+    letter-spacing: 2px;
+    color: #3687ad;
+}
+
+.nav-menu .nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dark-mode .nav-link {
+    color: white;
+}
+
+/* Mode toggler */
+#mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/mode-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white !important;
+    border-radius: 50%;
+    transition: transform 0.5s linear;
+}
+
+#mode-toggle:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+/* Sectiune Jumbotron */
+.jumbotron-section{
+    background: linear-gradient(
+        rgba(255,255,255, 0.25),
+        rgba(0,0, 0, 0.45)
+    ),
+    url("https://source.unsplash.com/1600x900/?html");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: calc(100vh - 60px);
+    color: white;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 2px black;
+    padding: 30px;
+}
+
+.jumbotron-section h1,
+.jumbotron-section p {
+    font-weight: 400;
+    z-index: 1;
+}
+
+.jumbotron-section .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0, 0, 0.25);
+}
+
+/* Sectiune Text */
+.page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 10px auto;
+    max-width: 1000px;
+}
+
+.page-content .page-content--text {
+    width: 30%;
+    margin-right: 30px;
+}
+
+.page-content .page-content--img {
+    width: 50%;
+    border-radius: 15px;
+}
+
+/* Sectiune Footer */
+footer {
+   background-color: black; 
+   color: white;
+   padding: 60px 30px;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+/* Sectiune Carduri */
+.cards-containter {
+    padding: 50px 30px;
+}
+
+.cards-containter h2 {
+    font-size: 38px;
+    text-align: center;
+}
+
+.cards-list {
+    display: grid;
+    grid-gap: 1rem;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-list li {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.card {
+    border: 1px solid #000000;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.dark-mode .card {
+    border-color: white
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card .card-content button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100%;
+    line-height: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.dark-mode .card .card-content button {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.card .card-content button:hover {
+    background-color: orange;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode .card .card-content button:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+/* Media Queries - style pentru display-uri mai mici de 600px */
+@media only screen and (max-width: 600px) {
+    .jumbotron-section h1 {
+        font-size: 1.2em !important;
+    }
+
+    .jumbotron-section p,
+    .jumbotron-section h1 {
+        margin: 0 30px;
+        font-size: 0.8em;
+    }
+
+    .page-content {
+        display: block;
+    }
+
+    .page-conent .page-conent--img {
+        width: 100%
+    }
+
+    .page-content .page-conent--text {
+        width: 100%;
+        margin: 30px 0;
+    }
+}
+
+/* Style pentru display-uri mai mari de 600px */
+@media only screen and (min-width: 600px) {
+    .cards-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Style pentru display-uri mai mari de 900px */
+@media only screen and (min-width: 900px) {
+    .cards-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

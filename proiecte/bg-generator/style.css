@@ -1,0 +1,37 @@
+body {
+    color: rgba(0, 0, 0, .5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    padding-top: 5%;
+}
+
+h1 {
+    width: 100%;
+    font: bold 3.5em 'Raleway', sans-serif;
+}
+
+h3 {
+     font-weight: 900;
+     text-transform: none;
+     letter-spacing: 0.01em;
+}
+
+button#randomBTN {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button#randomBTN:hover {
+    /* transform: translateY(2px); */
+    transform: rotateZ(360deg);
+}
+

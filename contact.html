@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Contact</title>
+        <script src="./js/app.js"></script>
+        <link rel="stylesheet" href="./style/app.css">
+
+        <!--Aplicam acelasi still de la hover a elementului atribut "href" incepe cu ... -->
+        <style>
+            .nav-menu .nav-link[href^="contact"] {
+                transition: all 0.4s ease-in-out;
+                letter-spacing: 2px;
+                color: #3687ad;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Meniu Navigatie -->
+        <nav>
+            <ul class="nav-menu">
+                <li>
+                    <a href="acasa.html" class="nav-link">
+                        Acasa
+                    </a>
+                </li>
+                <li>
+                    <a href="catalog.html" class="nav-link">
+                        Catalog
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <span id="mode-toggle"></span>
+        </nav>
+        <!-- END Meniu Navigatie -->
+    </body>
+</html>

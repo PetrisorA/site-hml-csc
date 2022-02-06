@@ -1,0 +1,16 @@
+{
+    "proiecte": [
+        {
+            "nume": "background Generator",
+            "descriere": "O pagina pentru a vizualiza un background folosind proprietatea CSS linear-gradient",
+            "imagine": "./img/bg.png",
+            "link": "./proiecte/bg-generator/index.html"
+        },
+        {
+            "nume": "Pixel Art",
+            "descriere": "Pagina care genereaza un canvas pe care putem face desene pixelate",
+            "imagine": "./img/pixel.png",
+            "link": "./proiecte/pixel-art/index.html"
+        }
+    ]
+}

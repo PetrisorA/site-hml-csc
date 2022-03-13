@@ -1,6 +1,13 @@
 const darkMode = document.querySelector('#mode-toggle');
 const body = document.body;
 
+const cardsContainer = document.querySelectorAll(".cards-list")[0];
+// Variabila pentru lista de proiecte din Firebase
+let projects = [];
+// Selcetam formularul de search
+const searchForm = document.getElementById("searchForm");
+const searchInput = searchForm.querySelector('input');
+
 darkMode.addEventListener('click', function() {
     body.classList.toggle('dark-mode');
     console.log(body);
@@ -54,6 +61,29 @@ function generateCard(proiect) {
     // Adaugam card-ul in li
     li.append(div);
     // Adaugam li in container
-    const cardsContainer = document.querySelectorAll(".cards-list")[0];
     cardsContainer.append(li);
 }
+
+function searchProjects(event) {
+    event.preventDefault();
+
+    // Salvam valoarea din searchInput
+    const searchValue = searchInput.value;
+    // Filtram lista de proiecte tdupa numele proiectului
+    const found = projects.find(proiect => proiect.nume.toLowerCase().includes(searchValue.toLocaleLowerCase()));
+
+    if(!found || !searchValue) {
+        cardsContainer.innerHTML = '';
+        projects.forEach(function(proiect) {
+            generateCard(proiect);
+        })
+    } else{
+        // S-a gasit o valoare
+        cardsContainer.innerHTML = '';
+        generateCard(found)
+    }
+
+    console.log(found);
+}
+
+searchForm.addEventListener('submit', searchProjects);

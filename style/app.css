@@ -221,6 +221,56 @@ footer p {
     border-color: black;
 }
 
+/* Pagina catalog */
+.catalog {
+    margin: 40px auto;
+    padding: 50px 30px;
+
+}
+
+.catalog form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.catalog form input {
+    min-width: 50%;
+    line-height: 30px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.catalog form button {
+    line-height: 30px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: crosshair;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+.catalog form button:hover {
+    background: black;
+    color: white;
+}
+
+.dark-mode .catalog form button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode .catalog form button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
 /* Media Queries - style pentru display-uri mai mici de 600px */
 @media only screen and (max-width: 600px) {
     .jumbotron-section h1 {
